@@ -6,6 +6,41 @@
 
 ---
 
+## 界面预览
+
+### 1. 任务栏常驻条（多视图切换 & 微型双列胶囊）
+
+![任务栏常驻条多视图与胶囊形态预览](docs/screenshots/taskbar_modes.png)
+
+### 2. 悬停浮窗面板（浅色 / 深色双主题）
+
+![悬停浮窗浅色与深色双主题对比](docs/screenshots/hover_panel_themes.png)
+
+### 3. 设置中心与算力配置向导
+
+<details open>
+<summary><strong>展开 / 收起设置中心预览（界面与浮窗定制 · 算力套餐管理 · Coding Plan 向导）</strong></summary>
+
+<br/>
+
+**界面与浮窗（全局深浅主题、开机自启与悬浮窗卡片拖拽排序）**
+
+![设置中心-界面与浮窗](docs/screenshots/settings_appearance.png)
+
+**算力套餐（多平台实时监控、本机凭据一键扫描与拖拽排序）**
+
+![设置中心-算力套餐](docs/screenshots/settings_quota.png)
+
+**Coding Plan 算力配置向导（直连测试与自动拉取套餐窗口）**
+
+<p align="center">
+  <img src="docs/screenshots/coding_plan_wizard.png" alt="算力配置向导" width="560" />
+</p>
+
+</details>
+
+---
+
 ## 核心特性
 
 - **原生任务栏嵌入与智能避让**：通过本进程 `AnyBarHostWnd` 中转窗口挂载进 `Shell_TrayWnd`，配合原生 C++ UIA 动态库（`taskbar_native.dll`）自动探测托盘与任务栏图标边界，避免遮挡图标与被 z 序压制。
