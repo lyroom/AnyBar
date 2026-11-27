@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# PyInstaller 打包产物
+build/
+dist/
+*.spec.bak
+*.manifest
+
+# 日志与临时诊断文件
+*.log
+_diag_bar.py
+_diag_btns.ps1
+_diag_click.ps1
+_err.log
+_out.log
+run.log
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# CodeArts Agent 工作目录（本地辅助文件，不入仓库）
+.arts/
+.codeartsdoer/
+
+# 运行时缓存与用户本地配置（仅入库 data/config.example.json 模板）
+data/config.json
+data/uia_cache.json
+data/weather_cache.json
+# merkle snapshot
+.merkle-snapshot.json
+
+# 临时验证与诊断脚本
+_tmp_*
+_diag_*
+
+# 测试与本地安全/Agent 目录
+.pytest_cache/
+.security/
+.zcode/

@@ -1,0 +1,157 @@
+{
+  "schedule": [
+    {
+      "start": "08:00",
+      "end": "12:00",
+      "text": "上午 · 专注工作学习，少看手机",
+      "note": "此时间段远离手机"
+    },
+    {
+      "start": "12:00",
+      "end": "14:00",
+      "text": "午休 · 吃饭散步",
+      "note": "饭后走 15 分钟"
+    },
+    {
+      "start": "14:00",
+      "end": "18:00",
+      "text": "下午 · 深度工作",
+      "note": "每小时起身活动"
+    },
+    {
+      "start": "18:00",
+      "end": "23:59",
+      "text": "晚间 · 复盘阅读",
+      "note": "23:30 前放下手机"
+    }
+  ],
+  "defaultText": "自由时间 · 注意休息",
+  "todos": [
+    {
+      "time": "14:00",
+      "title": "示例待办 · 写日报",
+      "note": "下班前完成",
+      "done": false
+    },
+    {
+      "time": "20:00",
+      "title": "示例待办 · 阅读半小时",
+      "note": "",
+      "done": false
+    }
+  ],
+  "quotas": [
+    {
+      "name": "Cursor",
+      "provider": "manual",
+      "apiKey": "",
+      "used": 340,
+      "limit": 500,
+      "unit": "req",
+      "color": "#38BDF8"
+    },
+    {
+      "name": "DeepSeek",
+      "provider": "manual",
+      "apiKey": "",
+      "balance": "¥18.5",
+      "unit": "",
+      "status": "ok",
+      "color": "#A78BFA"
+    }
+  ],
+  "quotaApi": {
+    "enabled": false,
+    "showOnBar": true,
+    "base": "bigmodel",
+    "scope": "personal",
+    "orgId": "",
+    "projectId": "",
+    "apiKey": "",
+    "intervalMin": 10,
+    "source": "glm",
+    "magpieUrl": "http://127.0.0.1:3425",
+    "magpieProviders": []
+  },
+  "style": {
+    "themeMode": "auto",
+    "fontFamily": "Microsoft YaHei UI",
+    "fontSize": 10,
+    "bold": true,
+    "autoColor": true,
+    "darkThemeColor": "#F9FAFB",
+    "lightThemeColor": "#111827",
+    "rightColor": "#38BDF8",
+    "scheduleBarColor": "#F59E0B",
+    "barView": "schedule",
+    "bgMode": "glass",
+    "bgColor": "#1F1F1F",
+    "scrollSpeed": 30,
+    "gapPx": 90,
+    "scrollPauseSec": 8,
+    "rightMode": "scroll",
+    "width": 330,
+    "iconSlot": "auto",
+    "displayMode": "full",
+    "capsuleLeft": "weather",
+    "capsuleRight": "cpu"
+  },
+  "sources": {
+    "quota": {
+      "enabled": true,
+      "intervalSec": 600
+    },
+    "system": {
+      "enabled": true,
+      "intervalSec": 2
+    },
+    "weather": {
+      "enabled": true,
+      "intervalSec": 900,
+      "city": ""
+    },
+    "dev": {
+      "enabled": true,
+      "intervalSec": 5,
+      "repoPath": ""
+    }
+  },
+  "panelCards": [
+    {
+      "id": "schedule",
+      "name": "日程时段",
+      "desc": "当前时段状态、时段进度条与全天日程列表",
+      "enabled": true
+    },
+    {
+      "id": "todos",
+      "name": "待办事项",
+      "desc": "今日待办任务列表、打勾标记完成与快速新建待办",
+      "enabled": true
+    },
+    {
+      "id": "system",
+      "name": "电脑状态监控",
+      "desc": "CPU 使用率、内存占用与硬盘空间余量实时监控",
+      "enabled": true
+    },
+    {
+      "id": "quotas",
+      "name": "算力与额度",
+      "desc": "AI 模型套餐剩余额度、用量百分比与周期刷新",
+      "enabled": true
+    },
+    {
+      "id": "weather",
+      "name": "实时天气",
+      "desc": "所在地或指定城市的天气状况、气温、湿度与体感",
+      "enabled": true
+    },
+    {
+      "id": "dev",
+      "name": "Git 仓库状态",
+      "desc": "当前分支、工作区未提交改动数与一键唤起系统终端",
+      "enabled": true
+    }
+  ]
+}

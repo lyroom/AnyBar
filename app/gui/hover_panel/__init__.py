@@ -1,0 +1,56 @@
+"""app.gui.hover_panel — 悬停浮窗壳层、卡片注册表与 7 大高内聚业务卡片。"""
+
+from .cards import (
+    AppleCheckCircle,
+    BasePanelCard,
+    DayList,
+    DevPanelCard,
+    HeaderSection,
+    MusicPanelCard,
+    PanelCardContext,
+    QuotaPanelCard,
+    QuotaTile,
+    SchedulePanelCard,
+    SystemPanelCard,
+    TempRangeBar,
+    TodoPanelCard,
+    TodoRow,
+    WeatherAtmosphereCard,
+    WeatherGlyphWidget,
+    WeatherPanelCard,
+    weather_atmosphere_palette,
+)
+from .panel import HoverPanel
+from .primitives import Badge, Divider, FrostedGlassTile, HoverPill, InnerTile, TierCard, palette
+from .registry import PanelCardRegistry, build_default_card_registry
+
+__all__ = [
+    "AppleCheckCircle",
+    "Badge",
+    "BasePanelCard",
+    "DayList",
+    "DevPanelCard",
+    "Divider",
+    "FrostedGlassTile",
+    "HeaderSection",
+    "HoverPanel",
+    "HoverPill",
+    "InnerTile",
+    "MusicPanelCard",
+    "PanelCardContext",
+    "PanelCardRegistry",
+    "QuotaPanelCard",
+    "QuotaTile",
+    "SchedulePanelCard",
+    "SystemPanelCard",
+    "TempRangeBar",
+    "TierCard",
+    "TodoPanelCard",
+    "TodoRow",
+    "WeatherAtmosphereCard",
+    "WeatherGlyphWidget",
+    "WeatherPanelCard",
+    "build_default_card_registry",
+    "palette",
+    "weather_atmosphere_palette",
+]

@@ -1,0 +1,104 @@
+/* common.qss — AnyBar 通用语义样式规则（所有窗口共享） */
+
+/* 透明无边框容器 */
+QWidget[transparent="true"],
+QWidget#groupHeader,
+QWidget#settingRow,
+QWidget#reorderContainer,
+QWidget#pageRoot,
+QWidget#pageInner,
+QWidget#rowsInner,
+QWidget#colHeaderRow,
+QWidget#tipRow,
+QWidget#defaultRow,
+QWidget#colorGroup,
+QWidget#bgGroup,
+QWidget#doneBox,
+QWidget#paramPage,
+QScrollArea#pageScroll,
+QScrollArea#rowsScroll {
+    background: transparent;
+    border: none;
+}
+
+/* 语义角色标签 */
+QLabel[role="primary"] {
+    color: {{text}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="secondary"] {
+    color: {{text_secondary}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="muted"] {
+    color: {{text_muted}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="disabled"] {
+    color: {{text_disabled}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="accent"] {
+    color: {{accent}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="ok"] {
+    color: {{ok}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="warn"] {
+    color: {{warn}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="danger"] {
+    color: {{danger}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="info"] {
+    color: {{info}};
+    background: transparent;
+    border: none;
+}
+QLabel[role="violet"] {
+    color: {{violet}};
+    background: transparent;
+    border: none;
+}
+
+/* 水平 / 垂直细分割线 */
+QFrame[role="divider"] {
+    background-color: {{divider}};
+    border: none;
+}
+
+/* Toast 横幅提示 */
+QFrame#toastBanner {
+    background-color: {{surface_elevated}};
+    border: 1px solid {{accent}};
+    border-radius: {{px:10}}px;
+}
+QFrame#toastBanner[kind="ok"] {
+    border-color: {{ok}};
+}
+QFrame#toastBanner[kind="warn"] {
+    border-color: {{warn}};
+}
+QFrame#toastBanner[kind="danger"] {
+    border-color: {{danger}};
+}
+QFrame#toastBanner[kind="info"] {
+    border-color: {{accent}};
+}
+QFrame#toastBanner QLabel {
+    color: {{text}};
+    background: transparent;
+    border: none;
+}

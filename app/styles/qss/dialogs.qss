@@ -1,0 +1,40 @@
+/* dialogs.qss — 子向导弹窗（如 CodingPlanDialog）专属样式补充 */
+
+QFrame#wizardTipCard {
+    background-color: {{accent_soft}};
+    border: 1px solid {{accent_border}};
+    border-radius: {{px:10}}px;
+}
+
+QLabel#wizardStatus {
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    color: {{text_muted}};
+}
+
+QLabel#wizardStatus[state="loading"] {
+    color: {{accent}};
+}
+
+QLabel#wizardStatus[state="ok"] {
+    color: {{ok}};
+}
+
+QLabel#wizardStatus[state="warn"] {
+    color: {{warn}};
+}
+
+QLabel#wizardStatus[state="danger"] {
+    color: {{danger}};
+}
+
+QColorDialog QPushButton {
+    padding: {{px:5}}px {{px:14}}px;
+    min-height: {{px:20}}px;
+}
+
+QColorDialog QSpinBox,
+QColorDialog QLineEdit {
+    min-height: {{px:28}}px;
+}

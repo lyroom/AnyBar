@@ -1,0 +1,52 @@
+/* menu.qss — 任务栏右键主菜单与紧凑子菜单 */
+
+QMenu {
+    background-color: {{menu_bg}};
+    border: 1px solid {{menu_border}};
+    border-radius: 0px;
+    padding: {{px:5}}px {{px:4}}px;
+    font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif;
+    font-size: {{px:12.5}}px;
+    font-weight: 500;
+}
+
+QMenu::item {
+    min-width: {{min_w_px}}px;
+    padding: {{px:6}}px {{pad_right}}px {{px:6}}px {{px:10}}px;
+    margin: {{px:1}}px {{px:2}}px;
+    border-radius: {{px:6}}px;
+    color: {{text}};
+    font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif;
+    font-size: {{px:12.5}}px;
+    font-weight: 500;
+}
+
+QMenu::item:selected {
+    background-color: {{menu_sel}};
+    color: {{text}};
+}
+
+QMenu::item:disabled {
+    color: {{text_disabled}};
+}
+
+QMenu::separator {
+    height: 1px;
+    background: {{divider}};
+    margin: {{px:4}}px {{px:10}}px;
+}
+
+QMenu::icon {
+    padding-left: {{px:10}}px;
+    padding-right: {{px:8}}px;
+}
+
+QMenu::indicator {
+    width: {{px:14}}px;
+    height: {{px:14}}px;
+    margin-left: {{px:6}}px;
+}
+
+QMenu::right-arrow {
+    margin-right: {{px:8}}px;
+}

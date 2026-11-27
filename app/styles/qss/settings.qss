@@ -1,0 +1,374 @@
+/* settings.qss — 设置中心与向导弹窗共用的统一 Liquid Fluent 样式表 */
+
+QDialog {
+    background-color: {{canvas}};
+    color: {{text}};
+}
+
+QLabel {
+    color: {{text}};
+    background: transparent;
+    border: none;
+    font-size: {{px:12.5}}px;
+    font-weight: 500;
+}
+
+QLabel#colHeader {
+    color: {{text_muted}};
+    border: none;
+    background: transparent;
+    font-size: {{px:11.5}}px;
+    font-weight: 600;
+}
+
+QLabel#sectionTitle {
+    color: {{text}};
+    font-size: {{px:13}}px;
+    font-weight: 600;
+}
+
+QLabel#mutedTip {
+    color: {{text_muted}};
+    font-size: {{px:11.5}}px;
+    font-weight: 400;
+}
+
+/* 可拖拽列表行卡片 */
+QFrame#RowCard {
+    background-color: {{surface}};
+    border: 1px solid {{border}};
+    border-radius: {{radius_row_card}}px;
+}
+
+QFrame#RowCard:hover {
+    border-color: {{border_strong}};
+}
+
+QFrame#RowCard[dragging="true"] {
+    background-color: {{surface_elevated}};
+    border: 1.5px solid {{accent}};
+}
+
+/* 按钮层级：默认次要按钮 / 主操作按钮 / 幽灵按钮 / 虚线新增按钮 */
+QPushButton {
+    background-color: {{surface_elevated}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius_control}}px;
+    padding: 0px {{px:14}}px;
+    font-size: {{px:12.5}}px;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: {{surface_hover}};
+    border-color: {{border_strong}};
+}
+
+QPushButton:pressed {
+    background-color: {{surface_press}};
+}
+
+QPushButton:disabled {
+    color: {{text_disabled}};
+    background-color: {{surface_sunken}};
+    border-color: {{border}};
+}
+
+QPushButton#primaryBtn {
+    background-color: {{accent}};
+    color: {{text_on_accent}};
+    border: none;
+    border-radius: {{radius_control}}px;
+    font-weight: 600;
+}
+
+QPushButton#primaryBtn:hover {
+    background-color: {{accent_hover}};
+}
+
+QPushButton#primaryBtn:pressed {
+    background-color: {{accent_pressed}};
+}
+
+QPushButton#primaryBtn:disabled {
+    background-color: {{surface_hover}};
+    color: {{text_disabled}};
+}
+
+QPushButton#ghostBtn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: {{text_secondary}};
+    border-radius: {{radius_control}}px;
+}
+
+QPushButton#ghostBtn:hover {
+    background-color: {{surface_hover}};
+    color: {{text}};
+}
+
+QPushButton#ghostBtn:pressed {
+    background-color: {{surface_press}};
+}
+
+QPushButton#addRowBtn {
+    background-color: transparent;
+    border: 1px dashed {{border_strong}};
+    border-radius: {{radius_add_btn}}px;
+    color: {{text_secondary}};
+    padding: 0px {{px:14}}px;
+    font-size: {{px:12.5}}px;
+    font-weight: 500;
+}
+
+QPushButton#addRowBtn:hover {
+    color: {{accent}};
+    border-color: {{accent}};
+    background-color: {{accent_soft}};
+}
+
+QPushButton#addRowBtn:pressed {
+    background-color: {{accent_soft_hover}};
+}
+
+/* 输入框 / 数值微调框 / 下拉选择框 */
+QLineEdit,
+QSpinBox,
+QDoubleSpinBox,
+QComboBox {
+    background-color: {{surface_sunken}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius_control}}px;
+    padding: 0px {{px:9}}px;
+    font-size: {{px:12.5}}px;
+    font-weight: 400;
+}
+
+QLineEdit:hover,
+QSpinBox:hover,
+QDoubleSpinBox:hover,
+QComboBox:hover {
+    background-color: {{surface_elevated}};
+    border-color: {{border_strong}};
+}
+
+QLineEdit,
+QSpinBox,
+QDoubleSpinBox {
+    selection-background-color: {{accent}};
+    selection-color: {{text_on_accent}};
+}
+
+QLineEdit:disabled,
+QSpinBox:disabled,
+QComboBox:disabled {
+    color: {{text_disabled}};
+    background-color: {{canvas}};
+    border-color: {{border_subtle}};
+}
+
+QComboBox {
+    selection-background-color: {{surface_hover}};
+    selection-color: {{text}};
+}
+
+QSpinBox::up-button,
+QSpinBox::down-button,
+QDoubleSpinBox::up-button,
+QDoubleSpinBox::down-button {
+    width: 0px;
+    height: 0px;
+    border: none;
+    background: none;
+}
+
+QSpinBox::up-arrow,
+QSpinBox::down-arrow,
+QDoubleSpinBox::up-arrow,
+QDoubleSpinBox::down-arrow {
+    width: 0px;
+    height: 0px;
+    border: none;
+}
+
+QLineEdit:focus,
+QSpinBox:focus,
+QDoubleSpinBox:focus,
+QComboBox:focus {
+    background-color: {{surface}};
+    border: 1.5px solid {{accent}};
+}
+
+QComboBox:editable {
+    background-color: {{surface_sunken}};
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    border: none;
+    background: transparent;
+    width: {{px:24}}px;
+}
+
+QComboBox::down-arrow {
+    {{combo_arrow_clause}}
+    border: none;
+    margin-right: {{px:8}}px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: {{menu_bg}};
+    border: 1px solid {{menu_border}};
+    border-radius: {{radius_control}}px;
+    padding: {{px:4}}px;
+    color: {{text}};
+    selection-background-color: {{accent_soft}};
+    selection-color: {{text}};
+    outline: none;
+}
+
+QComboBox QAbstractItemView::item {
+    padding: {{px:6}}px {{px:10}}px;
+    border-radius: {{px:5}}px;
+    background-color: transparent;
+    color: {{text}};
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: {{surface_hover}};
+    color: {{text}};
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: {{accent}};
+    color: {{text_on_accent}};
+}
+
+/* 单选框 */
+QRadioButton {
+    color: {{text}};
+    spacing: {{px:6}}px;
+    background: transparent;
+    font-size: {{px:12.5}}px;
+}
+
+QRadioButton::indicator {
+    width: {{px:14}}px;
+    height: {{px:14}}px;
+    border-radius: {{px:8}}px;
+    border: 1.5px solid {{border_strong}};
+    background-color: {{surface_sunken}};
+}
+
+QRadioButton::indicator:hover {
+    border-color: {{accent}};
+}
+
+QRadioButton::indicator:checked {
+    width: {{px:6}}px;
+    height: {{px:6}}px;
+    border-radius: {{px:8}}px;
+    border: {{px:5}}px solid {{accent}};
+    background-color: {{text_on_accent}};
+}
+
+/* 水平滑块 */
+QSlider::groove:horizontal {
+    background-color: {{track}};
+    height: {{px:5}}px;
+    border-radius: {{px:2.5}}px;
+    border: none;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: {{accent}};
+    height: {{px:5}}px;
+    border-radius: {{px:2.5}}px;
+    border: none;
+}
+
+QSlider::handle:horizontal {
+    background-color: #FFFFFF;
+    border: 1.5px solid {{accent}};
+    border-radius: {{px:8}}px;
+    width: {{px:16}}px;
+    height: {{px:16}}px;
+    margin: -{{px:5.5}}px 0 -{{px:5.5}}px 0;
+}
+
+QSlider::handle:horizontal:hover {
+    border: 2px solid {{accent_hover}};
+}
+
+/* 滚动区与细滚动条 */
+QScrollArea {
+    background: transparent;
+    border: none;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: {{px:7}}px;
+    margin: {{px:2}}px 0px {{px:2}}px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: {{border_strong}};
+    border-radius: {{px:3}}px;
+    min-height: {{px:28}}px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: {{text_muted}};
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+    border: none;
+    background: none;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+
+/* 复选框 */
+QCheckBox {
+    spacing: 8px;
+    font-weight: 400;
+    color: {{text}};
+    font-size: {{px:12.5}}px;
+    background: transparent;
+}
+
+QCheckBox::indicator {
+    width: {{cb_ind}}px;
+    height: {{cb_ind}}px;
+    border-radius: {{cb_corner}}px;
+    border: 1.5px solid {{border_strong}};
+    background-color: {{surface_sunken}};
+}
+
+QCheckBox::indicator:hover {
+    border: 1.5px solid {{accent}};
+    background-color: {{accent_soft}};
+}
+
+QCheckBox::indicator:checked {
+    background-color: {{accent}};
+    border: 1.5px solid {{accent}};
+    image: url({{check_img}});
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: {{accent_hover}};
+    border: 1.5px solid {{accent_hover}};
+}
+
+QCheckBox#todoDoneCheck {
+    spacing: 0px;
+}

@@ -1,0 +1,48 @@
+/* buttons_inputs.qss — 独立原子按钮与输入框片段（供局部场景按需编译） */
+
+QPushButton[variant="primary"] {
+    background-color: {{accent}};
+    color: {{text_on_accent}};
+    border: none;
+    border-radius: {{radius_control}}px;
+    padding: 0px {{px:16}}px;
+    font-size: {{px:12.5}}px;
+    font-weight: 600;
+}
+
+QPushButton[variant="primary"]:hover {
+    background-color: {{accent_hover}};
+}
+
+QPushButton[variant="primary"]:pressed {
+    background-color: {{accent_pressed}};
+}
+
+QPushButton[variant="primary"]:disabled {
+    background-color: {{surface_hover}};
+    color: {{text_disabled}};
+}
+
+QPushButton[variant="secondary"] {
+    background-color: {{surface_elevated}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius_control}}px;
+    padding: 0px {{px:12}}px;
+    font-size: {{px:12}}px;
+    font-weight: 500;
+}
+
+QPushButton[variant="secondary"]:hover {
+    background-color: {{surface_hover}};
+    border-color: {{border_strong}};
+}
+
+QPushButton[variant="secondary"]:pressed {
+    background-color: {{surface_press}};
+}
+
+QPushButton[variant="secondary"]:disabled {
+    color: {{text_disabled}};
+    background-color: {{surface_sunken}};
+}

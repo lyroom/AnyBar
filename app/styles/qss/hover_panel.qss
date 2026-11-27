@@ -1,0 +1,149 @@
+/* hover_panel.qss — 任务栏悬停浮窗及内部卡片统一样式（纯选择器语法） */
+
+#panelBody,
+#panelCanvas {
+    background: transparent;
+    border: none;
+}
+
+QScrollArea#panelScroll {
+    background: transparent;
+    border: none;
+}
+
+QScrollArea#panelScroll > QWidget > QWidget {
+    background: transparent;
+}
+
+QScrollArea#panelScroll QScrollBar:vertical {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    border: none;
+}
+
+/* 悬停面板快捷待办输入框 */
+QLineEdit#quickTodoInput {
+    color: {{text}};
+    background-color: {{surface_sunken}};
+    border: 1px solid {{border}};
+    border-radius: {{radius_inner}}px;
+    padding: 0px {{px:10}}px;
+    selection-background-color: {{accent}};
+    selection-color: {{text_on_accent}};
+}
+
+QLineEdit#quickTodoInput:hover {
+    border-color: {{border_strong}};
+}
+
+QLineEdit#quickTodoInput:focus {
+    background-color: {{surface}};
+    border: 1.5px solid {{accent}};
+}
+
+/* 幽灵链接按钮（展开日程 / 折叠已完成 / 清空已完成 / 打开终端） */
+QPushButton#ghostLink {
+    background: transparent;
+    border: none;
+    color: {{text_muted}};
+    padding: {{px:2}}px {{px:6}}px;
+    border-radius: {{px:5}}px;
+}
+
+QPushButton#ghostLink:hover {
+    color: {{accent}};
+    background-color: {{surface_hover}};
+}
+
+QPushButton#ghostLink[hoverTone="accent"]:hover {
+    color: {{accent}};
+    background-color: {{surface_hover}};
+}
+
+QPushButton#ghostLink[hoverTone="danger"]:hover {
+    color: {{danger}};
+    background-color: {{surface_hover}};
+}
+
+/* 日程列表行 */
+QWidget#dayRow {
+    background: transparent;
+    border: none;
+}
+
+QWidget#dayRow[active="true"] {
+    background-color: {{warn_soft}};
+    border-radius: {{px:6}}px;
+}
+
+/* 额度卡片套餐标签徽章 */
+QLabel#planBadge {
+    background-color: {{surface_hover}};
+    color: {{text_secondary}};
+    border: none;
+    border-radius: {{px:5}}px;
+    padding: 1px {{px:6}}px;
+}
+
+/* 待办时间胶囊标签 */
+QLabel#todoTimePill {
+    background-color: {{warn_soft}};
+    color: {{warn}};
+    border: none;
+    border-radius: {{px:5}}px;
+    padding: {{px:2}}px {{px:6}}px;
+}
+
+QLabel#todoTimePill[done="true"] {
+    background-color: {{surface_sunken}};
+    color: {{text_disabled}};
+}
+
+/* 天气城市磨砂胶囊 */
+QLabel#weatherCityBadge {
+    color: {{text}};
+    background-color: {{weather_city_bg}};
+    border: 1px solid {{weather_city_border}};
+    border-radius: {{px:10}}px;
+    padding: 0px {{px:9}}px;
+}
+
+/* 通用状态胶囊徽章 */
+QLabel#statusBadge {
+    border: none;
+    border-radius: {{radius_badge}}px;
+    padding: 0px {{px:8}}px;
+    background-color: {{surface_elevated}};
+    color: {{text_secondary}};
+}
+
+QLabel#statusBadge[tone="accent"] {
+    background-color: {{accent_soft}};
+    color: {{accent}};
+}
+
+QLabel#statusBadge[tone="ok"] {
+    background-color: {{ok_soft}};
+    color: {{ok}};
+}
+
+QLabel#statusBadge[tone="warn"] {
+    background-color: {{warn_soft}};
+    color: {{warn}};
+}
+
+QLabel#statusBadge[tone="danger"] {
+    background-color: {{danger_soft}};
+    color: {{danger}};
+}
+
+QLabel#statusBadge[tone="info"] {
+    background-color: {{info_soft}};
+    color: {{info}};
+}
+
+QLabel#statusBadge[tone="violet"] {
+    background-color: {{violet_soft}};
+    color: {{violet}};
+}
